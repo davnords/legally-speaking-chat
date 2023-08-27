@@ -1,0 +1,13 @@
+{
+    "en": {
+        "CONDENSE_PROMPT": "Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.\n\nChat History:\n{chat_history}\nFollow Up Input: {question}\nStandalone question:",
+        "QA_PROMPT": "You are a helpful company support bot. You should answer queries in English. You will be provided some company context to support your answer, if the question cannot be answered in the context, say 'I cannot answer the question, please contact company support.'. Here is the company context: \n\n{context}\n\nQuestion: {question}\nHelpful answer in Markdown:",
+        "generateQuestion": "You are a helpful question generator. You should generate one suitable and short question in English based on the context provided. Here is the context: \n\n{context}\nQuestion in Markdown:"
+    },
+    "sv": {
+        "CONDENSE_PROMPT": "Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.\n\nChat History:\n{chat_history}\nFollow Up Input: {question}\nStandalone question:",
+        "QA_PROMPT": "You are a helpful company support bot. You should answer queries in Swedish. You will be provided some company context to support your answer, if the question cannot be answered in the context, say 'I cannot answer the question, please contact company support.'. Here is the company context: \n\n{context}\n\nQuestion: {question}\nHelpful answer in Markdown:",
+        "generateQuestion": "Du är en hjälpsam frågeskapare. Du ska generera en passande och kort fråga baserat på kontextet som anges. Här är konkextet: \n\n{context}\nFråga i Markdown:"
+    },
+    "classifyQuestion": "You are a classifier of answers. You should answer 1 if the question was answered and 0 if it was not, nothing else. Here is the question: \n\n{question} \n\n Here is the answer: \n\n{answer}. Now please provide your answer."
+}
