@@ -36,8 +36,14 @@ import { useState, useEffect } from 'react'
 import { Button } from '../ui/button';
 import { Input } from '../ui/input'
 import { toast } from 'react-hot-toast'
-import { NamespaceProps } from '../embedded-chat';
 
+export interface NamespaceProps {
+    namespace: string;
+    exampleQuestions: string[];
+    introText: string;
+    ui?: { color: string, title: string };
+    projectName?: string
+}
 
 const IS_PREVIEW = process.env.VERCEL_ENV === 'preview'
 export interface ChatProps extends React.ComponentProps<'div'> {

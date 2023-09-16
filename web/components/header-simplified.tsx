@@ -24,9 +24,6 @@ export async function Header() {
                 <a href='/admin'>Admin</a>
             </div>
             <div className="flex items-center justify-end space-x-2">
-
-            </div>
-            <div className="flex items-center justify-end space-x-2">
                 <a
                     href="/contact"
                     className={cn(buttonVariants())}

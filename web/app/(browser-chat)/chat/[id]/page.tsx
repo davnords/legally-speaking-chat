@@ -4,7 +4,6 @@ import { type Metadata } from 'next'
 import { notFound, redirect } from 'next/navigation'
 import { auth } from '@/auth'
 import { getChat } from '@/app/actions'
-import { NamespaceProps } from '@/components/embedded-chat'
 
 
 export const runtime = 'edge'
