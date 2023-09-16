@@ -23,6 +23,8 @@ export async function POST(req: NextRequest) {
     // Extract the `messages` from the body of the request
     const json = await req.json()
     let { messages } = json
+    const user = (await auth()).user
+    console.log('USER', user)
     const userId = (await auth())?.user.id
     const email = (await auth())?.user.email
     const question = messages[messages.length - 1].content
