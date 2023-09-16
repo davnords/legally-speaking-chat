@@ -12,10 +12,10 @@ import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Company Chatbot',
+    default: 'LegallySpeaking AI',
     template: `%s - Company Chatbot`
   },
-  description: 'An AI-powered chatbot to power your company.',
+  description: 'AI powered legal advisor',
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: 'white' },
     { media: '(prefers-color-scheme: dark)', color: 'black' }
