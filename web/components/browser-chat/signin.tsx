@@ -57,7 +57,7 @@ const SigninPage = () => {
                     <div className="container">
                         <div className="-mx-4 flex flex-wrap">
                             <div className="w-full px-4">
-                                <div className="mx-auto max-w-[500px] rounded-md bg-primary bg-opacity-5 py-10 px-6 dark:bg-dark sm:p-[60px]">
+                                <div className="mx-auto max-w-[500px] rounded-md bg-neutral-500	bg-opacity-5 py-10 px-6 sm:p-[60px]">
                                     <h3 className="mb-3 text-center text-2xl font-bold text-black dark:text-white sm:text-3xl">
                                         Logga in på ditt konto
                                     </h3>

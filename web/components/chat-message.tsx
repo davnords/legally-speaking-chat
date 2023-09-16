@@ -7,6 +7,7 @@ import { CodeBlock } from '@/components/ui/codeblock'
 import { MemoizedReactMarkdown } from '@/components/markdown'
 import { IconOpenAI, IconUser, IconHarveySpecter } from '@/components/ui/icons'
 import { ChatMessageActions } from '@/components/chat-message-actions'
+import { Typography, Stack, Fade } from '@mui/material'
 
 export interface ChatMessageProps {
   message: Message
@@ -16,6 +17,12 @@ export interface ChatMessageProps {
 }
 
 export function ChatMessage({ message, index, setSourceNumber, setShowSources, ...props }: ChatMessageProps) {
+  const handleSourceClick = () => {
+    if (setSourceNumber && setShowSources && index) {
+      setSourceNumber(index)
+      setShowSources(true)
+    }
+  }
   return (
     <div
       className={cn('group relative mb-4 flex items-start')}
@@ -85,6 +92,9 @@ export function ChatMessage({ message, index, setSourceNumber, setShowSources, .
         >
           {message.content}
         </MemoizedReactMarkdown>
+        {setShowSources && message.role !== 'user' ? <Fade in={true} style={{ transitionDelay: '3000ms' }}><Stack>
+          <Typography component="button" variant="caption" onClick={handleSourceClick} sx={{ cursor: 'pointer', mt: 1, textDecoration: 'underline' }} >Visa källor</Typography>
+        </Stack></Fade> : null}
         <ChatMessageActions message={message} setShowSources={setShowSources} setSourceNumber={setSourceNumber} index={index} />
       </div>
     </div>

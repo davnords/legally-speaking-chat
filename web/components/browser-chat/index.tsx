@@ -67,7 +67,7 @@ export function Chat({ id, initialMessages, className, namespaceId, namespaceTit
                 id,
                 previewToken,
             },
-            api: '/api/chat',
+            api: '/api/chat-openai',
             onResponse(response) {
                 if (response.status === 401) {
                     toast.error(response.statusText)

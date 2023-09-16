@@ -30,13 +30,6 @@ export function ChatMessageActions({
     copyToClipboard(message.content)
   }
 
-  const handleSourceClick = () => {
-    if (setSourceNumber && setShowSources && index) {
-      setSourceNumber(index)
-      setShowSources(true)
-    }
-  }
-
   return (
     <div
       className={cn(
@@ -45,13 +38,6 @@ export function ChatMessageActions({
       )}
       {...props}
     >
-      {message.role === 'assistant' && setShowSources ?
-        <>
-          <Button variant="ghost" size="icon" onClick={handleSourceClick}>
-            <BookIcon size={14} />
-            <span className="sr-only">Show sources</span>
-          </Button>
-        </> : null}
       <Button variant="ghost" size="icon" onClick={onCopy}>
         {isCopied ? <IconCheck /> : <IconCopy />}
         <span className="sr-only">Copy message</span>
