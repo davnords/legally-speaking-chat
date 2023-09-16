@@ -62,7 +62,7 @@ const SigninPage = () => {
                                         Logga in på ditt konto
                                     </h3>
                                     <p className="mb-11 text-center text-base font-medium text-body-color">
-                                        Logga in för en mer smidig användarupplevelse.
+                                        Logga in för att använda tjänsten, den är helt gratis!
                                     </p>
                                     <button onClick={() => signIn("google", { callbackUrl: `${window.location.origin}${callbackUrl}` })} className="mb-6 flex w-full items-center justify-center rounded-md bg-white p-3 text-base font-medium text-body-color shadow-one hover:text-primary dark:bg-[#242B51] dark:text-body-color dark:shadow-signUp dark:hover:text-white">
                                         <span className="mr-3">
